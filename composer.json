@@ -1,0 +1,22 @@
+{
+    "name": "pfazzi/ml",
+    "description": "Machine Learning Playground",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Pfazzi\\ML\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pfazzi\\ML\\Test\\": "test"
+        }
+    },
+    "require": {
+        "php": ">= 7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.2",
+        "vimeo/psalm": "^3.11"
+    }
+}
