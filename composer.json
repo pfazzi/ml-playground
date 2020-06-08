@@ -5,7 +5,10 @@
     "autoload": {
         "psr-4": {
             "Pfazzi\\ML\\": "src"
-        }
+        },
+        "files": [
+            "src/Math/functions.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -13,7 +16,8 @@
         }
     },
     "require": {
-        "php": ">= 7.4"
+        "php": ">= 7.4",
+        "webmozart/assert": "^1.8"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.2",
