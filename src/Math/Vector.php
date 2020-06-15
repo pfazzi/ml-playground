@@ -12,9 +12,12 @@ class Vector implements \ArrayAccess, \Countable
      */
     private array $values;
 
+    private int $count;
+
     private function __construct(float ...$values)
     {
         $this->values = $values;
+        $this->count = \count($values);
     }
 
     public static function fromValues(float ...$values): self
@@ -34,9 +37,7 @@ class Vector implements \ArrayAccess, \Countable
 
     public function offsetGet($offset)
     {
-        Assert::integer($offset);
-
-        return $this->getAt($offset);
+        return is_int($offset) ? $this->getAt($offset) : null;
     }
 
     public function offsetSet($offset, $value)
@@ -57,9 +58,9 @@ class Vector implements \ArrayAccess, \Countable
         return $this->values;
     }
 
-    public function count()
+    public function count(): int
     {
-        return \count($this->values);
+        return $this->count;
     }
 
     /**
